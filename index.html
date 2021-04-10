@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="841935496467-rhevq3h05h19irc0th40ickdepnt0pdv.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>MIDAS HOME</title>
+</head>
+<body>
+    <div id="home" class="section">
+        <nav>
+            <div class="navbar">
+                 <div class="logo">
+                    <h1>Midas IIITD</h1>
+                 </div>
+                <a href="#">Home</a>
+                <a href="#">Pages</a>
+                 \<a href="#">Services</a>
+                <a href="#">Blog</a>
+                <a href="#">Contacts</a>
+            </div>
+            <div class="search">
+                <img src="loupe.svg" alt="">
+            </div>
+         </nav>
+        <div class="team">
+            <img src="image_1.jpg" alt="">
+        </div>
+        <div class="gradient">
+            <img  src="Untitled_design-removebg.png" alt="">
+            <div class="content">
+                <h1>Web App Task</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+            </div>
+        </div>
+        <div class="last">
+            <a href="#form">Login | Sign up</a>
+            <div class="yt">
+               <img src="play-button.svg" alt="">
+               <p>Go To Youtube</p>
+            </div>
+        </div>
+    </div>
+    <div class="curve"><img src="bgformidasedit.png" alt=""></div>
+
+    <div  id="form" class="page2">
+        <div id="login" class="form-box">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onClick="logIn()">Log in</button>
+                <button type="button" class="toggle-btn" onClick="signUp()">Sign up</button>
+            </div>
+            <form id="login-form" action="" method="">
+                <input id="email" class="input-field" name="name" type="text" placeholder="Email" required>
+                <input id="password" class="input-field" name="password" type="password" placeholder="Password" required>
+                <input onclick="login()" class="submit-btn" type="submit"  value="Login">
+            </form>
+            <form id="signup-form" action="" method="">
+                <input id="email" class="input-field" name="email" type="text" placeholder="Email" required>
+                <input id="password" class="input-field" name="password" type="password" placeholder="Password" required>
+                <input class="input-field" name="password" type="password" placeholder="Confirm Password" required>
+                <input onclick="signup()"  class="submit-btn" type="submit" value="Sign up">
+            </form>
+        </div>
+    </div>
+    <div class="page3">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="data">
+            <p>Profile Details</p>
+            <img id="pic" class="img-circle">
+            <p>Email ID</p>
+            <p id="emailid" class="alert alert-danger"></p>
+            <P id="greet"></P>
+            <a  href="#" onclick="signOut();">Sign out</a>
+        </div>
+        </div>
+    </div>
+    <div class="page4">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="data1">
+            <p id="emailadd"></p>
+            <p id="greet1"></p>
+            <a href="#">Log Out</a>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login-form");
+        var y = document.getElementById("signup-form");
+        var z = document.getElementById("btn");
+
+        function signUp()
+        {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function logIn()
+        {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+    <script>
+        // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyC1MISSARfoOOsihIp0b07tl82Okuw_0DI",
+    authDomain: "midaslab-63e17.firebaseapp.com",
+    projectId: "midaslab-63e17",
+    storageBucket: "midaslab-63e17.appspot.com",
+    messagingSenderId: "16886314960",
+    appId: "1:16886314960:web:552c4f5eb97807d25f6bd5"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="form.js"></script>
+</body>
+</html>
